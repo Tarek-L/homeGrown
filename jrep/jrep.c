@@ -56,7 +56,7 @@ char **jrep_file(const char *fileName, const char *target) {
   for (size_t i = 0; i < VECT_LEN(matches); i++) {
     size_t len = VECT_LEN(lines[matches[i]]) + 8;
     char *tmp = malloc(len);
-    snprintf(tmp, len, "%zu : %s", i + 1, lines[matches[i]]);
+    snprintf(tmp, len, "%zu : %s", matches[i] + 1, lines[matches[i]]);
     VECT_PUSH(results, tmp);
   }
 

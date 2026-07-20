@@ -23,3 +23,8 @@ an interesting thing i got out with is the stat and lstat functions and how does
 ## TODO
 
 * only thing in mind currently is making jrep multithreaded since it would be a good learning experience.
+
+## Fixes
+
+* changed VECT_FREE(results[i]); to free(results[i]) since results[i] is a malloc'd string and not a vect 
+* a silly mistake is the line numbers, it was the current loop iteration plus one which will print the number of the match and not the line number, it changed correctly to matches[i] + 1
